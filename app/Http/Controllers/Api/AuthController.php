@@ -118,14 +118,27 @@ class AuthController extends Controller
     }
 
     public function companies ($id) {
-        // $user = Auth::user();
-        // $company = Company::find(3);
-        // $user->companies()->save($company);
-
         $user = User::find($id);
         if($user) {
             $companies = ['companies' => $user->companies];
             return response()->json(['success' => $companies], $this->successStatus);
+        } else {
+            return response()->json(['error' => 'User is not exists!'], 401);
+        }
+    }
+
+    public function storeCompany (Request $request, $id) {
+        $user = User::find($id);
+        if($user) {
+            $input = $request->all();
+
+            $company = Company::find(preg_replace('/[^0-9]/', '', $input['company_id']));
+            if($company) {
+                $user->companies()->save($company);
+                return response()->json(['success' => $user], $this->successStatus);
+            } else {
+                return response()->json(['error'=> 'Company is not exists!'], 401);
+            }
         } else {
             return response()->json(['error' => 'User is not exists!'], 401);
         }

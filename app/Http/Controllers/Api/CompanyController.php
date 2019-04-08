@@ -99,4 +99,21 @@ class CompanyController extends Controller
         	return response()->json(['error'=> 'Company is not exists!'], 401);
         }
  	}
+
+ 	public function storeUser (Request $request, $id) {
+        $company = Company::find($id);
+        if($company) {
+            $input = $request->all();
+
+            $user = User::find(preg_replace('/[^0-9]/', '', $input['user_id']));
+            if($user) {
+                $company->companies()->save($user);
+                return response()->json(['success' => $company], $this->successStatus);
+            } else {
+                return response()->json(['error'=> 'User is not exists!'], 401);
+            }
+        } else {
+            return response()->json(['error' => 'Company is not exists!'], 401);
+        }
+    }
 }
