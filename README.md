@@ -26,3 +26,9 @@ https://ek-laravel-crud-rest.herokuapp.com/
 - composer install
 - php artisan migrate
 - php artisan passport:install
+
+## Heroku - Cloud Application Platform
+https://www.heroku.com
+
+## db4free.net - MySQL Database for free
+https://db4free.net
