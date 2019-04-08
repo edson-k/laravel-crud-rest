@@ -14,7 +14,7 @@
 ##  SwaggerHub
 https://app.swaggerhub.com/apis/edsonk/laravel-crud-rest/1.0.0
 
-## Heroku
+## Example run on Heroku
 https://ek-laravel-crud-rest.herokuapp.com/
 
 ## Laravel Homestead
