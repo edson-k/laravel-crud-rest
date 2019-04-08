@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
 use App\User; 
+use App\Company; 
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 
@@ -131,7 +132,6 @@ class AuthController extends Controller
         $user = User::find($id);
         if($user) {
             $input = $request->all();
-
             $company = Company::find(preg_replace('/[^0-9]/', '', $input['company_id']));
             if($company) {
                 $user->companies()->save($company);

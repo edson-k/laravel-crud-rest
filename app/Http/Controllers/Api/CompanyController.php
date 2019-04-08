@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
 use App\Company; 
+use App\User; 
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 
@@ -104,10 +105,9 @@ class CompanyController extends Controller
         $company = Company::find($id);
         if($company) {
             $input = $request->all();
-
             $user = User::find(preg_replace('/[^0-9]/', '', $input['user_id']));
             if($user) {
-                $company->companies()->save($user);
+                $company->users()->save($user);
                 return response()->json(['success' => $company], $this->successStatus);
             } else {
                 return response()->json(['error'=> 'User is not exists!'], 401);

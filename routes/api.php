@@ -24,14 +24,14 @@ Route::prefix('v1')->group(function(){
 		Route::put('user/update/{id}', 'Api\AuthController@update');
 		Route::delete('user/destroy/{id}', 'Api\AuthController@destroy');
 		Route::get('user/companies/{id}', 'Api\AuthController@companies');
-		Route::get('user/store/company/{id}', 'Api\AuthController@storeCompany');
+		Route::post('user/store/company/{id}', 'Api\AuthController@storeCompany');
 
 		Route::get('company/show/{id}', 'Api\CompanyController@show');
 		Route::post('company/store', 'Api\CompanyController@store');
 		Route::put('company/update/{id}', 'Api\CompanyController@update');
 		Route::delete('company/destroy/{id}', 'Api\CompanyController@destroy');
 		Route::get('company/users/{id}', 'Api\CompanyController@users');
-		Route::get('company/store/user/{id}', 'Api\CompanyController@storeUser');
+		Route::post('company/store/user/{id}', 'Api\CompanyController@storeUser');
 	});
 	
 });
