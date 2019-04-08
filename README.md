@@ -11,6 +11,9 @@
 - [Collection Laravel API - Homestead](https://www.getpostman.com/collections/7c04fe7807ae5f284a81)
 - [Collection Laravel API - Heroku](https://www.getpostman.com/collections/781a12ca69889c9833b1)
 
+##  SwaggerHub
+https://app.swaggerhub.com/apis/edsonk/laravel-crud-rest/1.0.0
+
 ## Heroku
 https://ek-laravel-crud-rest.herokuapp.com/
 
