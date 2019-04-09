@@ -1,0 +1,18 @@
+    
+{
+  "name": "Laravel CRUD REST",
+  "description": "",
+  "keywords": [
+    "Laravel",
+    "REST",
+    "API"
+  ],
+  "repository": "https://github.com/edson-k/laravel-crud-rest",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
