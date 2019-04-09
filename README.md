@@ -16,6 +16,7 @@ https://app.swaggerhub.com/apis/edsonk/laravel-crud-rest/1.0.0
 
 ## Example run on Heroku
 https://ek-laravel-crud-rest.herokuapp.com/
+
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/edson-k/laravel-crud-rest)
 
 ## Laravel Homestead
